@@ -23,7 +23,7 @@ for a in np.arange(0.001,0.2,0.005):
     for b in np.arange(0.2,0.4,0.005):
         if rprime(a) == lprime(b):
             r_tangent = rprime(a)*x -rprime(a)*a +r(a)
-            if round(r_tangent.subs(x,b),0) == round(l(b),0):
+            if round(r_tangent.subs(x,b),0) == round(l(b),0):##소숫점 없이 반올림
                 #print(r_tangent.subs(x,b),l(b))
                 print(a,b)
 
@@ -31,6 +31,6 @@ for c in np.arange(0.6,0.72,0.0003):
     for d in np.arange(0.95,1,0.0003):
         if lprime(c) == bprime(d):
             l_tangent = lprime(c)*x -lprime(c)*c +r(c)
-            if round(l_tangent.subs(x,d),1) == round(l(d),1):
+            if round(l_tangent.subs(x,d),1) == round(l(d),1):##소숫점 한자리까지 반올림. 
                 #print(l_tangent.subs(x,d),l(d))
                 print(c,d)
